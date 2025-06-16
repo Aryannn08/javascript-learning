@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects Exercise</title>
+</head>
+<body>
+  
+
+<script>
+  // Creating an object
+  const product1 = {
+    name: 'Basketballl',
+    price: 2095
+  }
+  console.log(product1);
+  // Accessing object properties and increasing the price
+  product1.price += 500;
+  console.log(product1);
+
+  //using bracket notation to add a new property
+  product1['delivery-time'] = '3 days';
+  console.log(product1);
+
+  //Creating another object
+  const product2 = {
+    name: 'Football',
+    price: 1500
+  }
+
+  //function to compare prices of two products
+  function comparePrice(product1, product2){
+    if(product1.price > product2.price){
+      console.log(`${product1.name} is more expensive than ${product2.name}`);
+    }
+    else  if(product1.price < product2.price){
+      console.log(`${product2.name} is more expensive than ${product1.name}`);
+    }
+    else{
+      console.log(`${product1.name} and ${product2.name} are of same price`);
+    }
+  }
+  comparePrice(product1,product2);
+
+  function isSameProduct(product1,product2){
+    if(product1.name == product2.name && product1.price == product2.price){
+      console.log(`${product1.name} and ${product2.name} are same products`);
+    }
+    else{
+      console.log('false');
+    }
+  }
+  isSameProduct(product1,product2);
+
+  console.log('GOOD MORNING'.toLowerCase());
+
+  console.log('test'.repeat(2));
+</script>
+</body>
+</html>

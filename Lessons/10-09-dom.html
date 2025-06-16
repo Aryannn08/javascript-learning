@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom</title>
+</head>
+<body>
+<button>
+  hello
+</button>
+
+<button class = "js-button">
+  second button
+</button>
+
+<script>
+  //document.querySelector() method/attribute of DOM
+  //3-
+  console.log(document.querySelector('button')); //it will select the first button
+  console.log(document.querySelector('button').innerHTML); //it will select the first button and print its innerHTML
+  document.querySelector('button').innerHTML = 'hello aryan'; //it will select the first button and change its innerHTML to 'hello aryan'
+  console.log(document.querySelector('button').innerHTML); //it will select the first button and print its innerHTML
+  console.log(document.querySelector('.js-button')); //it will select the second button
+
+  //we can save objets in variables
+  const buttonElement = document.querySelector('.js-button');
+  console.log(buttonElement); //it will select the second button
+
+  /*
+  //2-
+  //document.body and document.title attribute of DOM
+  console.log(document.title);
+  document.title = 'Good job';
+
+  console.log(document.body);
+  */
+
+  /*
+  //1-
+  document.body.innerHTML = 'hello';
+  document.title = 'Good job!';
+  */
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!--classList.contains method to check if a class exist-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercie 10c</title>
+</head>
+<body>
+  <button class="js-button" onclick="checkClass();">
+    Test
+  </button>
+<script>
+  function checkClass(){
+    const button = document.querySelector('.js-button');
+    if(button.classList.contains('js-button')){
+      console.log('The button has the class js-button');
+    }else{
+      console.log('The button does not have the class js-button');
+    }
+  }
+</script>
+</body>
+</html>

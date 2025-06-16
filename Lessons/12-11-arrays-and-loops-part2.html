@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+  const array1 = [1,2,3];
+  const array2 = array1;
+  array2.push(4);
+  console.log(array2);
+  console.log(array1);
+
+  //Learn about array.slice() which creates a shallow copy
+  const array3 = array1.slice();
+  console.log(array3);
+
+  const array4 = array1.reverse();
+  console.log(array4);
+  console.log(array1);
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+
+  // //question -1 
+  // function findIndex(array,word){
+  //   for(let i=0;i<array.length;i++){
+  //     if(array[i]===word){
+  //       return i;
+  //     }
+  //   }
+  //   return -1;
+  // }
+  // console.log(findIndex(['Peeyush','Aryan','Aryan'],'Aryan'));
+
+  //question -3
+  // let result = [];
+  // function removeEgg(foods){
+  //  let count = 0;
+  //  for(let i=0;i<foods.length;i++){
+  //   const foods2 = foods.slice();
+  //   const reversefoods = foods2.reverse();
+  //    if(reversefoods[i]==='egg' && count<=1){
+  //      count++;
+  //      continue;
+  //    }
+  //    else{
+  //     result.push(reversefoods[i]);
+  //    }
+  //  }
+  //  console.log(result);
+  // }
+  
+  // removeEgg(['notEgg', 'egg', 'egg', 'notEgg', 'egg']);
+
+  //famous fizzbzz problem, display 1-20 in console, if divisible by 3 then display fizz or by 5 display buzz
+  for(let i=1;i<=20;i++){
+    if(i%3===0){
+      console.log('fizz');
+    }
+    else if(i%5===0){
+      console.log('buzz');
+    }
+    else console.log(i);
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+ /*
+ function greeting(){
+   console.log('hello');
+ }
+ greeting();
+ 
+ //storing function in a variable
+ const function1 = function greeting(){ //functions are values
+  console.log('hello2');
+ };
+ console.log(function1); //displays the content of function1
+ function1(); // runs the function inside
+
+ //start
+ const object1 = {
+  num: 2,
+  fun : function greeting() { //we can remove greeting ane make it an anonymous function
+    console.log('hello3');
+  }
+ };
+ object1.fun();
+
+ //start
+ function display(param){
+  console.log(param); //passing a value inta a function
+ }
+ display(2); //passing a value into a function
+
+ //start
+ function run(param){//passing a function into another function
+  param(); //hello4
+ };
+ run(function() { //the function that we are passing in is called a callback function or a callback 
+  console.log('hello4');
+ });
+ */
+
+
+ /*
+ //start
+ //setTimeout() - allows us to run a function in the future
+ setTimeout(function(){
+  console.log('timeout');
+ }, 3000); //3000 milliseconds, this will display text in function after 3 seconds
+ console.log('next line'); //this will run before setTimeout and is called asynchronous code
+
+//start
+ setInterval(function(){
+  console.log('interval');
+ }, 3000); //it will keep running the function every 3 seconds
+ console.log('next line 2'); //this is also an asynchronous line
+ */
+
+
+//start
+//.forEach loop for traversing an array
+[
+  'make dinner',
+  'watch youtube',
+  'wash dishes'
+].forEach(function(value,index){ //a function is need in forEach loop to run each time, if i will write only console.log in forEach then it will take three arguements - value,index,array - to print only value we need function\
+  if(value === 'wash dishes'){
+    return; //this will work same as continue
+  }
+  console.log(index);
+  console.log(value);
+});
+
+
+</script>
+</body>
+</html>

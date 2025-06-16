@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom Projects</title>
+  <style>
+    body{
+      padding-bottom : 110px;
+    }
+    .title{
+      margin-top : 50px;
+    }
+  </style>
+</head>
+<body>
+  <p>YouTube Subscribe Button</p>
+  <button onclick = "
+  subscribe();
+  " class = "js-subscribe-button">Subscribe
+  </button>
+  <br><br>
+  <p>Rock Paper Scissors</p>
+  <p><a href ="http://127.0.0.1:3000/Projects/11-09-rock-paper-scissors.html">Click here</a></p>
+
+  <p>Amazon Shipping Calculator</p>
+  <input placeholder="Cost of order"
+  class="js-cost-input"
+  onkeydown="handleCostKeydown(event);">
+  <button onclick="
+  calculateTotal();
+  ">Calculate</button>
+  <p class="js-total-cost"></p>
+  
+<script>
+  function handleCostKeydown(event){
+    // console.log(event.key); //just to check the key pressed 
+    if(event.key === 'Enter'){
+    calculateTotal();
+    }
+  };
+
+  function calculateTotal(){
+    const inputElement = document.querySelector('.js-cost-input');
+    let cost = Number(inputElement.value); //without Number() it will be string
+
+    if(cost<40){
+      cost += 10; //without number it will add a string and a number which is calle type coercion
+    }
+
+    document.querySelector('.js-total-cost').innerHTML = `Total cost is $${cost}`;
+  };
+  
+  function subscribe(){
+   const buttonElement = document.querySelector('.js-subscribe-button');
+   if(buttonElement.innerText === 'Subscribe'){
+    buttonElement.innerHTML = 'Subscribed';
+   } else {
+    buttonElement.innerHTML = 'Subscribe';
+   }
+  }
+</script>
+</body>
+</html>

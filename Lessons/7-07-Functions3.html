@@ -1,0 +1,50 @@
+<!--Function to celsius to fahrenheit-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CelsiusToFahrenheit</title>
+</head>
+<body>
+<script>
+  function celsiusToFahrenheit(celsius) {
+    return (celsius * 9/5) + 32;
+  }
+
+  function fahrenheitToCelsius(fahrenheit) {
+    return (fahrenheit - 32) * 5/9;
+  }
+  function convertTemperature(temperature,unit){
+    if(unit == 'C'){
+      return celsiusToFahrenheit(temperature);
+    }
+    else if(unit == 'F'){
+      return fahrenheitToCelsius(temperature);
+    }
+  }
+
+  console.log(celsiusToFahrenheit(0)); // 32
+  console.log(fahrenheitToCelsius(32)); // 0
+  console.log(convertTemperature(0,'C')); //32
+
+//Function to convert a number from one length to another
+  function convertLength(length, fromUnit, toUnit) {
+    const conversionRates = {
+      'cm': 0.01,
+      'm': 1,
+      'km': 1000,
+      'in': 0.0254,
+      'ft': 0.3048,
+      'mi': 1609.34
+    };
+
+    return length * conversionRates[fromUnit] / conversionRates[toUnit];
+  }
+
+  console.log(convertLength(100, 'cm', 'm')); // 1
+  console.log(convertLength(1, 'm', 'km')); // 0.001
+  console.log(convertLength(1, 'km', 'mi')); // 0.621371
+</script>
+</body>
+</html>

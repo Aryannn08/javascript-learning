@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+
+
+<script>
+const product = {
+  name: 'Apple',
+  price: 1000
+}
+console.log(product);
+console.log(product.name);
+
+//to change the existing value of the object
+product.name = 'Samsung';
+console.log(product.name);
+
+//to add a new property to the object
+product.newProperty = 100;
+console.log(product);
+
+//to delete a property from the object
+delete product.newProperty;
+console.log(product);
+
+//crating an object and accessing it with square brackets
+const product2 = {
+  name: 'Shirt',
+  'delivery-time': '2 days', //we are using '' because of the - in the key
+  rating: { //this is an nested object
+    stars: 4.5,
+    count: 87
+  }
+};
+console.log(product2.name);
+console.log(product2['delivery-time']);
+console.log(product2.rating.count); //accessing the nested object
+
+//coverting javascript object to json
+console.log(JSON.stringify(product2));
+const jsonString = JSON.stringify(product2);
+const jsonObject = JSON.parse(jsonString);
+console.log(jsonObject); //printing the json object i.e. the javascript format
+</script>
+</body> 
+</html>
+
+<!--by default use dot notatio and square for properties that don't work-->
