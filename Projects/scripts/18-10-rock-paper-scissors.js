@@ -6,6 +6,7 @@ let score = JSON.parse(localStorage.getItem('score')) ||
       };
 
     updateScoreElement();
+    //test commit
 
     // if(!score){ //score === null , you can also use this
     //   score = {
