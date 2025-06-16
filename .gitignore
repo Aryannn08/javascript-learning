@@ -1,0 +1,11 @@
+# Ignore node modules
+node_modules/
+
+# Ignore system files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
