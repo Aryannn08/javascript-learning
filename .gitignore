@@ -1,11 +1,21 @@
-# Ignore node modules
+# Ignore node modules (for future use)
 node_modules/
-
-# Ignore system files
-.DS_Store
 
 # VS Code settings
 .vscode/
 
 # Logs
 *.log
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows system files
+Thumbs.db
+
+# npm/yarn debug files (if ever used)
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
