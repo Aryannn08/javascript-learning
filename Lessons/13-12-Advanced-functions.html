@@ -68,7 +68,8 @@
   'make dinner',
   'watch youtube',
   'wash dishes'
-].forEach(function(value,index){ //a function is need in forEach loop to run each time, if i will write only console.log in forEach then it will take three arguements - value,index,array - to print only value we need function\
+].forEach((value,index) => { // it was written earlier as .forEach(function(value,index){}) but for forEach it is recommended to use arrow functions
+  //a function is need in forEach loop to run each time, if i will write only console.log in forEach then it will take three arguements - value,index,array - to print only value we need function\
   if(value === 'wash dishes'){
     return; //this will work same as continue
   }

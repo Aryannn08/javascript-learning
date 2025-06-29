@@ -22,7 +22,7 @@ let score = JSON.parse(localStorage.getItem('score')) ||
 
     function autoPlay(){
       if(!isAutoPlaying){
-       intervalId = setInterval(function(){
+       intervalId = setInterval(() => { //when passing a function to another function it is recommended to use arrow function , earlier it was written as setInterval(function(){....})
        const playerMove = pickComputerMove();
        playGame(playerMove);
        }, 1000);
@@ -34,6 +34,32 @@ let score = JSON.parse(localStorage.getItem('score')) ||
       
     }
     //end
+
+    document.querySelector('.js-rock-button') //added it from advanced function part 2
+     .addEventListener('click' , () => {
+     playGame('rock');
+     });
+
+    document.querySelector('.js-paper-button') //added it from advanced function part 2
+     .addEventListener('click' , () => {
+     playGame('paper');
+     });
+
+    document.querySelector('.js-scissors-button') //added it from advanced function part 2
+     .addEventListener('click' , () => {
+     playGame('scissors');
+     });
+    
+     //adding eventListener to play game with keywords only 
+    document.body.addEventListener('keydown', (event) => {
+      if(event.key === 'r'){ //event.key tells which key was pressed on keyboard and keydown is the event here , event.code returns the physical keycode
+        playGame('rock');
+      } else if(event.key === 'p'){
+        playGame('paper');
+      } else if(event.key === 's'){
+        playGame('scissors');
+      }
+    });
 
     function playGame(playerMove){
       const computerMove = pickComputerMove();

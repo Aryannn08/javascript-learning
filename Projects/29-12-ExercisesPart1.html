@@ -3,20 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>App</title>
 </head>
 <body>
-  
+<!-- <button class="js-button1" onclick="
+  updateText();
+  ">
+  Start
+</button> -->
+<!-- <button class="js-update" onclick="
+ updateCart();
+">
+  Add to cart
+</button> -->
+<button onclick="messages++">
+  Add
+</button>
+<button onclick="messages--">
+  Remove
+</button>
 <script>
-  var add = function(){
-    let count = 0;
-    while(count < 2){
-        console.log(2+3); // prints 5
-        count++;
-    }
-}
+//start
+//   var add = function(){
+//     let count = 0;
+//     while(count < 2){
+//         console.log(2+3); // prints 5
+//         count++;
+//     }
+// }
+// add();
+//end
 
-add();
+// //start
+//   function updateText(){
+//     const button = document.querySelector('.js-button1');
+//     button.innerHTML = 'Loading....';
+//     setTimeout(function(){
+//       button.innerHTML = 'Finished';
+//     },1000);
+//   }
+// //end
+
+//start
+// let timeoutId;
+// function updateCart(){
+//   const button = document.querySelector('.js-update');
+//   button.innerHTML = 'Added';
+   
+//   clearTimeout(timeoutId);
+  
+//   timeoutIdsetTimeout(function(){
+//     button.innerHTML = 'Add to cart';
+//   },2000);
+
+// }
+//end
+  
+  let messages = 2;
+  setInterval(function() {
+      if (document.title === 'App' && messages>0) {
+        document.title = `${messages} New messages`;
+      } else {
+        document.title = 'App';
+      }
+    }, 1000);
+
 
 </script>
 </body>
